@@ -18,14 +18,11 @@ function Dialog({ open, children, onClose }: DialogProps): JSX.Element {
       leaveFrom='transform scale-100 opacity-100'
       leaveTo='transform scale-95 opacity-0'
     >
-      <UIDialog
-        onClose={onClose}
-        className='fixed z-10 inset-0 overflow-y-auto'
-      >
+      <UIDialog onClose={onClose} className='fixed z-10 inset-0 overflow-y-auto'>
         <div className='flex items-center justify-center min-h-screen'>
           <UIDialog.Overlay className='fixed inset-0 bg-black opacity-30' />
 
-          <div className='relative bg-zinc-800 text-slate-200 font-raleway ring-1 ring-white ring-opacity-20 shadow-md rounded-xl w-85vw mx-auto sm:w-420px'>
+          <div className='relative bg-slate-900 text-slate-200 font-raleway shadow-lg rounded-xl w-85vw mx-auto sm:w-420px'>
             {children}
           </div>
         </div>

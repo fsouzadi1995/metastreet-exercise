@@ -1,0 +1,4 @@
+{
+  "etherscanBaseUrl": "https://etherscan.io/address",
+  "covalentBaseUrl": "https://api.covalenthq.com/v1"
+}

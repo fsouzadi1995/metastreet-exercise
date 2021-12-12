@@ -3,9 +3,13 @@ import { useWeb3React } from '@web3-react/core';
 
 import AccountDialog from './AccountDialog';
 import AddressBadge from './AddressBadge';
+import ConnectorButton from './ConnectorButton';
 
 function Header(): JSX.Element {
+  const { active } = useWeb3React();
   const [isDialogOpen, setIsDialogOpen] = React.useState<boolean>(false);
+
+  const closeDialog = () => setIsDialogOpen(false);
 
   return (
     <header className='min-w-full bg-slate-700 py-4 px-6'>
@@ -14,13 +18,11 @@ function Header(): JSX.Element {
           <a href='#'>🌐</a>
         </div>
 
+        <ConnectorButton />
         <AddressBadge onClick={() => setIsDialogOpen(true)} />
       </div>
 
-      <AccountDialog
-        open={isDialogOpen}
-        onClose={() => setIsDialogOpen(false)}
-      />
+      <AccountDialog open={isDialogOpen} onClose={closeDialog} />
     </header>
   );
 }

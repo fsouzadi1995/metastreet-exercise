@@ -10,6 +10,9 @@ module.exports = {
         '85vw': '85vw',
         '420px': '420px',
       },
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
     },
   },
   plugins: [],

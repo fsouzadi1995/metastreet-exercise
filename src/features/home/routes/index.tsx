@@ -1,10 +1,15 @@
 import BaseLayout from '../../../components/BaseLayout';
-import MetamaskConnector from '../components/MetamaskConnector';
+import { useEagerConnect } from '../../../hooks/useEagerConnect';
+import GridPlaceholder from '../components/GridPlaceholder';
+import NFTGrid from '../components/NFTGrid';
 
 function Home(): JSX.Element {
+  const tried = useEagerConnect();
+
   return (
     <BaseLayout>
-      <MetamaskConnector />
+      <GridPlaceholder />
+      <NFTGrid />
     </BaseLayout>
   );
 }

@@ -16,7 +16,7 @@ function AddressBadge({ onClick }: AddressBadgeProps): JSX.Element | null {
   return (
     <button
       type='button'
-      className='bg-slate-800 rounded-md py-1 px-4 flex gap-2 items-center font-roboto-mono transition-all hover:ring-1 hover:ring-slate-400'
+      className='bg-slate-800 text-cyan-400 rounded-md py-2 px-4 flex gap-2 items-center font-roboto-mono transition-all outline-none hover:ring-1 hover:ring-slate-400 focus:ring-1 focus:ring-slate-400'
       onClick={() => onClick()}
     >
       <div>
