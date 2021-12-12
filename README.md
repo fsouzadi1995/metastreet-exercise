@@ -1,6 +1,6 @@
 # Metastreet Exercise
 
-## Technologies/libs used:
+## Technologies/libs used
 
 * Vite
 * React
