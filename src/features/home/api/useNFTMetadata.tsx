@@ -17,8 +17,6 @@ function getNFTMetadata() {
 
     const results = await promises;
 
-    console.log(results);
-
     const intersectedResults = results.map((data: ERC721Metadata) => {
       if (!data.image) {
         return;
