@@ -3,7 +3,7 @@ import { NFTItem } from '../types';
 import { etherscanBaseUrl } from '../../../config/static.json';
 import { FiArrowUpRight } from 'react-icons/fi';
 import Skeleton from 'react-loading-skeleton';
-import { formatToHttpProtocol } from '../../../utils/string-utils';
+import { normalizeUrl } from '../../../utils/string-utils';
 
 type NFTCardProps = NFTItem;
 
@@ -25,7 +25,7 @@ function NFTCard(nft: NFTCardProps): JSX.Element | null {
         <div className='p-6'>
           {nft.image ? (
             <img
-              src={formatToHttpProtocol(nft.image)}
+              src={normalizeUrl(nft.image)}
               alt={nft.contract_name}
               className='w-32 h-32 mx-auto'
             />

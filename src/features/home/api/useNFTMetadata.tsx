@@ -1,12 +1,12 @@
 import useSWR from 'swr';
 import axios from '../../../lib/axios';
 import { ERC721Metadata, ITokenURI, NFTList } from '../types';
-import { formatToHttpProtocol } from '../../../utils/string-utils';
+import { normalizeUrl } from '../../../utils/string-utils';
 
 function getNFTMetadata() {
   return async (_: string, nfts: NFTList, uris: Array<ITokenURI>) => {
     const mappedUris = uris.map(
-      (uri) => ({ ...uri, resourceUrl: formatToHttpProtocol(uri.resourceUrl) } as ITokenURI),
+      (uri) => ({ ...uri, resourceUrl: normalizeUrl(uri.resourceUrl) } as ITokenURI),
     );
 
     const promises = Promise.all<ERC721Metadata[] | any>(
