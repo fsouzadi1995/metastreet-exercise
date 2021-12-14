@@ -41,7 +41,7 @@ function NFTCard(nft: NFTCardProps): JSX.Element | null {
           )}
         </div>
 
-        <div className='mt-2 py-2 px-2 rounded-bl-lg rounded-br-lg text-slate-500 bg-slate-700 transition-all group-hover:text-slate-200'>
+        <div className='mt-2 py-2 px-2 font-roboto-mono rounded-bl-lg rounded-br-lg text-slate-500 bg-slate-700 transition-all group-hover:text-slate-200'>
           <TokenAddress address={nft.contract_address} />
         </div>
       </div>
