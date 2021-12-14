@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   theme: {
@@ -13,6 +15,11 @@ module.exports = {
       animation: {
         'spin-slow': 'spin 3s linear infinite',
       },
+    },
+
+    screens: {
+      xs: '475px',
+      ...defaultTheme.screens,
     },
   },
   plugins: [],

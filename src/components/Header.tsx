@@ -1,12 +1,10 @@
 import * as React from 'react';
-import { useWeb3React } from '@web3-react/core';
 
 import AccountDialog from './AccountDialog';
 import AddressBadge from './AddressBadge';
 import ConnectorButton from './ConnectorButton';
 
 function Header(): JSX.Element {
-  const { active } = useWeb3React();
   const [isDialogOpen, setIsDialogOpen] = React.useState<boolean>(false);
 
   const closeDialog = () => setIsDialogOpen(false);

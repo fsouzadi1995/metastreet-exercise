@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { Web3ReactProvider } from '@web3-react/core';
 import { ToastContainer } from 'react-toastify';
 import { getLibrary } from '../web3/getLibrary';
@@ -11,6 +12,7 @@ function AppProviders({ children }: AppProvidersProps): JSX.Element {
   return (
     <Web3ReactProvider getLibrary={getLibrary}>
       {children}
+
       <ToastContainer
         position='bottom-center'
         autoClose={5000}

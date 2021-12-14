@@ -28,14 +28,14 @@ function AccountDialog(props: AccountDialogProps): JSX.Element | null {
       .then(() => setText(null));
   }, [text]);
 
+  // const disconnect = () => {
+  //   deactivate();
+  //   props.onClose();
+  // };
+
   if (!account) {
     return null;
   }
-
-  const disconnect = () => {
-    deactivate();
-    props.onClose();
-  };
 
   return (
     <Dialog {...props}>
@@ -64,7 +64,7 @@ function AccountDialog(props: AccountDialogProps): JSX.Element | null {
                 <div>
                   <p className='text-slate-400 text-xs'>Connected with Metamask</p>
                 </div>
-                <div>
+                {/* <div>
                   <button
                     type='button'
                     className='py-1 px-4 rounded-xl text-cyan-500 ring-1 ring-cyan-500 text-xs hover:text-cyan-600 hover:ring-cyan-600'
@@ -72,7 +72,7 @@ function AccountDialog(props: AccountDialogProps): JSX.Element | null {
                   >
                     Disconnect
                   </button>
-                </div>
+                </div> */}
               </div>
               <div className='flex gap-3 items-center'>
                 <div>

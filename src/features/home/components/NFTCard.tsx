@@ -3,6 +3,7 @@ import { NFTItem } from '../types';
 import { etherscanBaseUrl } from '../../../config/static.json';
 import { FiArrowUpRight } from 'react-icons/fi';
 import Skeleton from 'react-loading-skeleton';
+import { formatToHttpProtocol } from '../../../utils/string-utils';
 
 type NFTCardProps = NFTItem;
 
@@ -22,14 +23,18 @@ function NFTCard(nft: NFTCardProps): JSX.Element | null {
           </div>
         </div>
         <div className='p-6'>
-          {nft.logo_url ? (
-            <img src={nft.logo_url} alt={nft.contract_name} className='w-16 h-16 mx-auto' />
+          {nft.image ? (
+            <img
+              src={formatToHttpProtocol(nft.image)}
+              alt={nft.contract_name}
+              className='w-32 h-32 mx-auto'
+            />
           ) : (
             <Skeleton
               circle
-              height={60}
-              width={60}
-              containerClassName='h-16 flex justify-center items-center'
+              height={120}
+              width={120}
+              containerClassName='h-32 flex justify-center items-center'
               baseColor='#1e293b'
               highlightColor='#334155'
             />
