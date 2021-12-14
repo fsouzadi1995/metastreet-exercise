@@ -10,7 +10,7 @@ const dummyCards = Array.from({ length: 6 }, (_, idx) => ({
   contract_name: '',
   contract_ticker_symbol: '',
   resourceUrl: '',
-  nft_data: [],
+  nft_data: null,
   type: 'nft',
   supports_erc: [SupportedERCS.ERC721, SupportedERCS.ERC1155],
 })) as NFTList;
